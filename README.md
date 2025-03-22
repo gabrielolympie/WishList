@@ -1,5 +1,5 @@
 # ✨ WishList ✨
-A list of projects I'm thinking about and might develop in the future! 🚀
+A list of projects I already tackled of thinking about and might develop in the future! 🚀
 
 ## 🤖 MOE - Pruner
 A way to fuse experts from a Mixture of Experts (MoE) models to reduce the total number of parameters. ✂️
