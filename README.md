@@ -1,79 +1,129 @@
 # ✨ WishList ✨
-A list of projects I already tackled of thinking about and might develop in the future! 🚀
+A curated list of projects I've tackled or am actively thinking about developing! 🚀 This is my playground for exploring exciting ideas in the world of AI and beyond.
 
 ## 🤖 MOE - Pruner
-A way to fuse experts from a Mixture of Experts (MoE) models to reduce the total number of parameters. ✂️
+A project focused on intelligently fusing experts within Mixture of Experts (MoE) models to reduce the overall parameter count. ✂️ Think of it as slimming down powerful AI models without sacrificing too much performance!
 
-Currently working on DeepSeek V2 Lite and DeepSeek V2 Lite Coder models.  Refining it to work on larger MoEs like DeepSeek V3 or the future Qwen 3 release.
+Currently refining it for DeepSeek V2 Lite and DeepSeek V2 Lite Coder models. The goal is to scale this up to even larger MoEs like DeepSeek V3 or the upcoming Qwen 3 release. 
 
-🚧 WIP 🚧
+🚧 **Work in Progress!** 🚧
 
-[moe-pruner on GitHub](https://github.com/gabrielolympie/moe-pruner)
+[🔗 GitHub Repo](https://github.com/gabrielolympie/moe-pruner)
 
 ## 🧠 LLM - Pruner
-A project similar to [moe-pruner](https://github.com/gabrielolympie/moe-pruner), but focused on dense Large Language Models (LLMs). 💡
+Similar to [moe-pruner](https://github.com/gabrielolympie/moe-pruner), but this time targeting dense Large Language Models (LLMs). 💡 The aim is to make LLMs more efficient and accessible.
 
-Principles to leverage:
-- **Low-Rank Decomposition:** Decompose linear layers from the MLP of an LLM into low-rank matrices for memory efficiency. Inference compute should remain similar. 📉
-- **Successive Layer Fusions:** Fuse successive layers in an LLM to reduce the number of layers, improving both memory and compute efficiency. 🤝
-- **Successive Layer Parallelism:**  Parallelize successive layers in an LLM for compute efficiency (akin to MoE decomposition). ⚡️
+Key principles I'm exploring:
+
+*   **📉 Low-Rank Decomposition:** Breaking down large linear layers into smaller, more manageable matrices to reduce memory usage, while maintaining inference speed.
+*   **🤝 Successive Layer Fusions:** Combining consecutive layers in an LLM to reduce the total number of layers, leading to both memory and computational savings.
+*   **⚡️ Successive Layer Parallelism:**  Parallelizing successive layers for faster processing, inspired by the decomposition techniques used in MoE models.
 
 ## 📝 Notion React Markdown
-Creating a React component that mimics the Notion editor, but works with pure Markdown for better LLM interoperability. ✍️
+Building a React component that replicates the familiar Notion editor experience, but with the flexibility of pure Markdown. ✍️ This will make it easier to integrate LLMs with a user-friendly editing interface.
 
 Resources:
-- [Milkdown](https://github.com/Milkdown/milkdown): A Markdown editor framework. 🥛
-- [Crepe](https://milkdown.dev/docs/guide/using-crepe):  A Milkdown component. 🥞
+
+*   [🥛 Milkdown](https://github.com/Milkdown/milkdown): A fantastic Markdown editor framework.
+*   [🥞 Crepe](https://milkdown.dev/docs/guide/using-crepe): A powerful Milkdown component.
 
 Challenges:
-- Achieving modularity and efficient backend interactions with the current implementation. 🧩
+
+*   🧩 Achieving a modular design and efficient backend integration.
 
 ## 🦀 Python Rust Transpiler
-A transpiler to generate Rust implementations of Python functions, with Python bindings for efficient integration. 🐍➡️🦀
+A transpiler that automatically converts Python functions into optimized Rust code, complete with Python bindings for seamless integration. 🐍➡️🦀
 
-Principles to leverage:
-- Current Reinforcement Learning (RL) techniques for LLMs enable test-oriented self-improvement. 🧪
-- Rust offers safety and performance guarantees, enhancing LLM robustness. 💪
-- LLMs can generate Rust code from Python code. 🤖
-- Unit tests and profiling will validate and optimize the transpiler. 📊
+The core ideas:
+
+*   🧪 Leveraging Reinforcement Learning (RL) techniques to enable LLMs to self-improve through testing.
+*   💪 Harnessing Rust's safety and performance guarantees to create more robust LLM applications.
+*   🤖 Using LLMs to generate Rust code from Python, automating the translation process.
+*   📊 Validating and optimizing the transpiler with thorough unit tests and profiling.
 
 Challenges:
-- Learning Rust! 😅
+
+*   😅 Learning Rust (it's a journey!).
 
 ## 🚀 YoPo - You Only Prompt Once
-Current LLM workflows often require complex frameworks (Haystack, LangChain, etc.) to create Directed Acyclic Graph (DAG) workflows, which can be tedious. 😩
+Tired of complex frameworks like Haystack or LangChain for building LLM workflows? 😩 YoPo simplifies things by letting you define an entire workflow with a *single* prompt. It then automatically generates a Directed Acyclic Graph (DAG) with optimized parallelism. 🪄
 
-YoPo aims to simplify this by allowing you to define a workflow with a single prompt, automatically generating the DAG with optimized parallelism. 🪄
-
-[YoPo on GitHub](https://github.com/gabrielolympie/YoPo) (already quite powerful, but the formalism can be refined).
+[🔗 GitHub Repo](https://github.com/gabrielolympie/YoPo) (already quite powerful, but always room for improvement!)
 
 ## 🌌 YoPo 2 - You Only Prompt Once 2
-Building on YoPo, imagine defining a graph of agents, where each node is an LLM with specific tools, connected to other LLMs.  The LLM automatically processes input and decides where to send it. 🧠🔗🧠
+Taking YoPo to the next level! Imagine a graph of intelligent agents, each powered by an LLM with specific tools, connected and communicating with each other. 🧠🔗🧠
 
-YoPo 2 enables a simple way to define this agent graph and let it run autonomously until it reaches terminal endpoints. 🏁
+YoPo 2 makes it easy to define this agent graph and let it run autonomously until it reaches a desired outcome. 🏁
 
-[YoPo V2 on GitHub](https://github.com/gabrielolympie/YoPo_V2) (unfinished, but potentially revisited).
+Key features:
+
+*   **Triggers:** Conditions that determine when an agent should activate.
+*   **Processes:** Actions performed by individual agents.
+*   **Routers:** Mechanisms for agents to decide where to send their output.
+*   **Terminal Nodes:** Points where the graph execution stops.
+
+[🔗 GitHub Repo](https://github.com/gabrielolympie/YoPo_V2) (currently unfinished, but potentially being revisited!)
 
 ## ⚙️ Py3CL - 3CL Method in Python
-A legacy project reproducing the 3CL method and providing tools to optimize a given Distributed Processing Engine (DPE). 🛠️
+A legacy project reproducing the 3CL method (a technique for distributed processing engine optimization) in Python. 🛠️
 
-It's about 95% accurate and runs quickly (around 10k DPE/second on a single CPU core). Includes a basic Streamlit interface. 📈
+It's highly accurate (around 95%) and runs quickly (approximately 10,000 DPEs/second on a single CPU core). Includes a basic Streamlit interface for visualization. 📈
 
-Also implemented a constraint optimization method for DPE optimization (not publicly available yet, but can be provided upon request). 🎁
+I've also implemented a constraint optimization method for DPE optimization (available upon request). 🎁
 
-[Py3CL on GitHub](https://github.com/gabrielolympie/Py3CL)
+[🔗 GitHub Repo](https://github.com/gabrielolympie/Py3CL)
 
 ## 🎨 VisualAIFlows - Python Backend for Rivet
-I was searching for visual LLM workflow tools and was impressed by [Rivet](https://rivet.ironcladapp.com/) from IronClad. 🤩
+Inspired by the visual LLM workflow tool [Rivet](https://rivet.ironcladapp.com/) from IronClad. 🤩
 
-The challenge was that it was in TypeScript, and I wasn't a full-stack developer at the time.
+I created a Python backend (using FastAPI) to generate simple Rivet graphs based on HTTP nodes, making it easier to query the backend. 🐍
 
-So, I created a basic Python backend (using FastAPI) to create simple Rivet graphs (based on HTTP nodes) that query the backend easily. 🐍
+The backend automatically generates the necessary graphs to integrate new routes within Rivet, streamlining plugin development. 🔌
 
-The backend automatically generates the necessary graphs to use new routes within Rivet, simplifying plugin implementation. 🔌
+I paused this project after realizing that no-code tools aren't always ideal for production, but it's still great for rapid prototyping! ✨
 
-I paused this project when I realized that no-code tools aren't ideal for production environments, and the only ones I'd consider are those that allow code export. 📦
+[🔗 GitHub Repo](https://github.com/gabrielolympie/VisualAIFlows)
 
-Still great for rapid prototyping and proof-of-concept work! ✨
+---
 
-[VisualAIFlows on GitHub](https://github.com/gabrielolympie/VisualAIFlows)
+## 🛠️ Tech Stack
+
+My current toolkit for these projects:
+
+*   **Languages:**
+    *   Backend: Python (FastAPI, Pydantic, Pandas, NumPy, SciPy, Matplotlib, Seaborn, Scikit-learn, etc.)
+    *   Frontend: Streamlit, React, Chakra UI, Gradio
+    *   Database: Supabase, Meilisearch
+*   **Specializations:**
+    *   Deep Learning: PyTorch, TensorFlow, PyTorch Lightning
+    *   LLM: Transformers, PEFT, Mirascope, ExLlama v2, VLLM
+    *   Vector Databases: Meilisearch
+    *   Optimization: Optuna, SciPy
+    *   Parallelism: Numba, JobLib
+    *   Data: Pandas, Datasets
+    *   Visualization: Matplotlib, Seaborn, Plotly, Streamlit, Gradio
+    *   Deployment: Docker, Fly
+    *   Flow: Burr, Rivet
+*   **Clouds:**
+    *   Fly.io: 🥇 Best overall (simplicity, GPU cold start, feature-rich, but a bit pricey).
+    *   GCP: ☁️ Most feature-rich, but expensive and GPU availability can be limited.
+    *   RunPod: 🚀 Great for GPU availability; storage can be expensive (recommended for easy GPU notebook access).
+    *   Scaleway: 🇫🇷 Best for data sovereignty and excellent features.
+    *   Modal: ✨ Simplified deployments, great interface and features, but cold starts can be slow.
+    *   Replicate: 📦 Exists!
+*   **Tools / IDE:**
+    *   VS Code
+    *   Jupyter Notebook
+    *   Continue.dev
+
+---
+
+## 🤝 Contributing
+
+I welcome contributions to any of these projects!  Feel free to:
+
+*   Open an issue to discuss a bug or feature request.
+*   Submit a pull request with your changes.
+*   Share your thoughts and ideas.
+
+Let's build something amazing together! 🎉
