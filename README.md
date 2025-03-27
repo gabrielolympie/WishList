@@ -16,7 +16,7 @@ Similar to [moe-pruner](https://github.com/gabrielolympie/moe-pruner), but this 
 Key principles I'm exploring:
 
 *   **📉 Low-Rank Decomposition:** Breaking down large linear layers into smaller, more manageable matrices to reduce memory usage, while maintaining inference speed. => tested, sounds good, doesn't works.
-*   **🤝 Successive Layer Fusions:** Combining consecutive layers in an LLM to reduce the total number of layers, leading to both memory and computational savings.
+*   **🤝 Successive Layer Fusions:** Combining consecutive layers in an LLM to reduce the total number of layers, leading to both memory and computational savings. > tested with a naive implementation (layer merging without posttraining), doesn't work.
 *   **⚡️ Successive Layer Parallelism:**  Parallelizing successive layers for faster processing, inspired by the decomposition techniques used in MoE models.
 
 ## 📝 Notion React Markdown
