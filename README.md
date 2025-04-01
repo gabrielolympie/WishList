@@ -1,25 +1,27 @@
 # ✨ WishList ✨
 A curated list of projects I've tackled or am actively thinking about developing! 🚀 This is my playground for exploring exciting ideas in the world of AI and beyond.
 
-## 🤖 MOE - Pruner
+## Highlights:
+- Moe Pruner : Prune experts in MOE to create reasonably sized distilled models.
+- Prompt Server : Turn any prompt in a fast api route
+- Notion React Markdown :  it's notion, but it's also markdown, and it's llm friendly.
+- Python rust transpiler : convert any python code into rust code with python bindings, with RL.
+- Yopo: Parallel Dags workflows, from a single prompt.
+- Yopo 2 : Any graph workflow, from a single prompt.
+- Py3CL : 3Cl method for DPE calculation, in python.
+- VisualAIFlows : Fastapi server for rivet.
+
+🚧 **Work in progress** 🚧
+
+### 🤖 MOE - Pruner
 A project focused on intelligently fusing experts within Mixture of Experts (MoE) models to reduce the overall parameter count. ✂️ Think of it as slimming down powerful AI models without sacrificing too much performance!
 
 Currently refining it for DeepSeek V2 Lite and DeepSeek V2 Lite Coder models. The goal is to scale this up to even larger MoEs like DeepSeek V3 or the upcoming Qwen 3 release. 
 
-🚧 **Work in Progress!** 🚧
-
 [🔗 GitHub Repo](https://github.com/gabrielolympie/moe-pruner)
 
-## 🧠 LLM - Pruner
-Similar to [moe-pruner](https://github.com/gabrielolympie/moe-pruner), but this time targeting dense Large Language Models (LLMs). 💡 The aim is to make LLMs more efficient and accessible.
 
-Key principles I'm exploring:
-
-*   **📉 Low-Rank Decomposition:** Breaking down large linear layers into smaller, more manageable matrices to reduce memory usage, while maintaining inference speed. => tested, sounds good, doesn't works.
-*   **🤝 Successive Layer Fusions:** Combining consecutive layers in an LLM to reduce the total number of layers, leading to both memory and computational savings. > tested with a naive implementation (layer merging without posttraining), doesn't work.
-*   **⚡️ Successive Layer Parallelism:**  Parallelizing successive layers for faster processing, inspired by the decomposition techniques used in MoE models.
-
-## 📝 Notion React Markdown
+### 📝 Notion React Markdown
 Building a React component that replicates the familiar Notion editor experience, but with the flexibility of pure Markdown. ✍️ This will make it easier to integrate LLMs with a user-friendly editing interface.
 
 Resources:
@@ -31,7 +33,39 @@ Challenges:
 
 *   🧩 Achieving a modular design and efficient backend integration.
 
-## 🦀 Python Rust Transpiler
+Actually finished, I'll open source it some days.
+
+### 🚀 Prompt Server
+A FastAPI server that simply serves prompts, no code required.
+
+## Why Prompt Server?
+- Eliminates repetitive boilerplate code for prompt handling
+- Enables rapid iteration by modifying prompts without code changes
+- Standardizes prompt management across projects
+- Simplifies integration with frontend applications
+
+## Features
+- **Prompt-first architecture**: Define prompts as markdown files - no additional code needed
+- **Multi-provider support**: Works with any provider supported by [LiteLLM](https://docs.litellm.ai/docs/providers)
+- **Multimodal capabilities**: Handle text, images, audio, video, and documents (varies by provider)
+- **Streaming responses**: Get interleaved text and structured outputs
+- **Automatic routing**: Prompt file paths become API endpoints automatically
+- **Retry & fallback**: Built-in retry logic and fallback model support
+- **Docker-ready**: Easy containerization for deployment
+
+🚧 **FUTURE PROJECTS** 🚧
+
+### 🧠 LLM - Pruner
+Similar to [moe-pruner](https://github.com/gabrielolympie/moe-pruner), but this time targeting dense Large Language Models (LLMs). 💡 The aim is to make LLMs more efficient and accessible.
+
+Key principles I'm exploring:
+
+*   **📉 Low-Rank Decomposition:** Breaking down large linear layers into smaller, more manageable matrices to reduce memory usage, while maintaining inference speed. => tested, sounds good, doesn't works.
+*   **🤝 Successive Layer Fusions:** Combining consecutive layers in an LLM to reduce the total number of layers, leading to both memory and computational savings. > tested with a naive implementation (layer merging without posttraining), doesn't work.
+*   **⚡️ Successive Layer Parallelism:**  Parallelizing successive layers for faster processing, inspired by the decomposition techniques used in MoE models.
+
+
+### 🦀 Python Rust Transpiler
 A transpiler that automatically converts Python functions into optimized Rust code, complete with Python bindings for seamless integration. 🐍➡️🦀
 
 The core ideas:
@@ -45,12 +79,13 @@ Challenges:
 
 *   😅 Learning Rust (it's a journey!).
 
-## 🚀 YoPo - You Only Prompt Once
+## Past / on hold Projects
+### 🚀 YoPo - You Only Prompt Once
 Tired of complex frameworks like Haystack or LangChain for building LLM workflows? 😩 YoPo simplifies things by letting you define an entire workflow with a *single* prompt. It then automatically generates a Directed Acyclic Graph (DAG) with optimized parallelism. 🪄
 
 [🔗 GitHub Repo](https://github.com/gabrielolympie/YoPo) (already quite powerful, but always room for improvement!)
 
-## 🌌 YoPo 2 - You Only Prompt Once 2
+### 🌌 YoPo 2 - You Only Prompt Once 2
 Taking YoPo to the next level! Imagine a graph of intelligent agents, each powered by an LLM with specific tools, connected and communicating with each other. 🧠🔗🧠
 
 YoPo 2 makes it easy to define this agent graph and let it run autonomously until it reaches a desired outcome. 🏁
@@ -64,7 +99,7 @@ Key features:
 
 [🔗 GitHub Repo](https://github.com/gabrielolympie/YoPo_V2) (currently unfinished, but potentially being revisited!)
 
-## ⚙️ Py3CL - 3CL Method in Python
+### ⚙️ Py3CL - 3CL Method in Python
 A legacy project reproducing the 3CL method (a technique for distributed processing engine optimization) in Python. 🛠️
 
 It's highly accurate (around 95%) and runs quickly (approximately 10,000 DPEs/second on a single CPU core). Includes a basic Streamlit interface for visualization. 📈
@@ -73,7 +108,7 @@ I've also implemented a constraint optimization method for DPE optimization (ava
 
 [🔗 GitHub Repo](https://github.com/gabrielolympie/Py3CL)
 
-## 🎨 VisualAIFlows - Python Backend for Rivet
+### 🎨 VisualAIFlows - Python Backend for Rivet
 Inspired by the visual LLM workflow tool [Rivet](https://rivet.ironcladapp.com/) from IronClad. 🤩
 
 I created a Python backend (using FastAPI) to generate simple Rivet graphs based on HTTP nodes, making it easier to query the backend. 🐍
